@@ -34,6 +34,65 @@
     .tag svg { width: 18px; height: 18px; }
     .hero h1 { font-size: clamp(28px, 5vw, 56px); line-height: 1.05; margin: 12px 0 8px; }
     .hero p.lead { font-size: clamp(14px, 1.8vw, 20px); color: #cbd5e1; margin: 0 0 18px; }
+    
+    /* Enhanced Lead Section */
+    .lead-enhanced {
+      margin: 0 0 24px;
+      display: grid;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .highlight-text {
+      font-size: clamp(15px, 2vw, 22px);
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 6px;
+    }
+    .highlight-keyword {
+      color: #fbbf24;
+      font-weight: 700;
+      background: rgba(251,191,36,.08);
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .highlight-danger {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+    .tech-statement {
+      font-size: clamp(14px, 1.8vw, 20px);
+      color: #cbd5e1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .tech-badge {
+      background: var(--momo);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+    .action-text {
+      color: #10b981;
+      font-weight: 600;
+    }
+    .effectiveness {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .concept-text {
+      font-size: clamp(14px, 1.8vw, 20px);
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+    .concept-highlight {
+      color: #fbbf24;
+      font-weight: 700;
+    }
     .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
     .btn-primary { background: var(--momo); color: var(--white); padding: 14px 22px; border-radius: 12px; font-weight: 800; box-shadow: 0 10px 25px rgba(230,0,18,.35); transition: transform .15s ease, box-shadow .2s ease, background .2s ease; }
     .btn-primary:hover { transform: translateY(-1px); background: var(--momo-dark); box-shadow: 0 14px 30px rgba(230,0,18,.48); }
@@ -186,6 +245,11 @@
       .hero { padding: clamp(16px, 3vw, 24px) clamp(12px, 3vw, 16px); }
       .hero h1 { font-size: clamp(22px, 6vw, 36px); line-height: 1.2; }
       .hero p.lead { font-size: clamp(14px, 2.5vw, 18px); margin-bottom: 16px; }
+      .lead-enhanced { gap: 8px; margin-bottom: 20px; }
+      .highlight-text { font-size: clamp(14px, 3.5vw, 18px); margin-bottom: 4px; }
+      .tech-statement { font-size: clamp(13px, 3vw, 16px); gap: 3px; margin-bottom: 4px; }
+      .tech-badge { padding: 2px 6px; font-size: 0.85em; }
+      .concept-text { font-size: clamp(13px, 3vw, 16px); }
       .container { padding: clamp(8px, 2vw, 16px); }
       .sticky-cta { display: flex; }
       .features { grid-template-columns: 1fr; }
@@ -206,6 +270,11 @@
       .hero-grid { gap: 14px; }
       .hero h1 { font-size: clamp(18px, 7vw, 28px); line-height: 1.15; margin: 8px 0 6px; }
       .hero p.lead { font-size: clamp(13px, 3.5vw, 16px); margin-bottom: 12px; }
+      .lead-enhanced { gap: 6px; margin-bottom: 16px; }
+      .highlight-text { font-size: clamp(13px, 4vw, 16px); margin-bottom: 3px; }
+      .tech-statement { font-size: clamp(12px, 3.5vw, 15px); gap: 2px; margin-bottom: 3px; }
+      .tech-badge { padding: 1px 5px; font-size: 0.8em; }
+      .concept-text { font-size: clamp(12px, 3.5vw, 15px); }
       .tag { padding: 5px 8px; font-size: 11px; }
       .hero-cta { gap: 8px; margin-top: 8px; }
       .btn-primary { padding: 10px 16px; font-size: 14px; }
@@ -255,7 +324,7 @@
     <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
       <div style="display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.3px;font-size:clamp(16px,2.5vw,20px);">
         <img src="WETOP-LOGO-紅.png" alt="WETOP LOGO" style="height: 32px; width: auto; object-fit: contain;">
-        <span>WETOP × MOMO 雙11</span>
+        <span>WETOP × MOMO 雙11 限時守護！</span>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
         <a class="chip" href="#bundles">精選方案</a>
@@ -275,11 +344,24 @@
             <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16" stroke="currentColor" stroke-width="2"/><path d="M12 4v16" stroke="currentColor" stroke-width="2"/></svg>
             雙11｜全室守護計畫
           </div>
-          <h1>主動淨化 × 無耗材 × MIT 製造</h1>
+          <h1>從氣味開始的防疫革命。</h1>
           <div style="font-size: clamp(18px, 3vw, 24px); margin: 8px 0 12px; font-weight: 700; line-height: 1.3;">
             限量 <span style="color:var(--momo);">100 台</span> 破盤價 <span style="color:var(--momo);">NT$18,000</span> 起
           </div>
-          <p class="lead">從客廳到臥室，一次到位的居家防霉除味解方。光離子催化（PICT）主動分解污染源，全天候守護。</p>
+          <div style="height: 16px;"></div>
+          <div class="lead-enhanced">
+            <div class="highlight-text">
+              <span class="highlight-keyword">氣味分子</span>，是<span class="highlight-danger">病毒與細菌</span>的隱形載體
+            </div>
+            <div class="tech-statement">
+              <span class="tech-badge">PICT 光離子催化</span> 
+              <span class="action-text">主動分解污染源</span>，
+              <span class="effectiveness">滅活<strong style="color:var(--momo);font-size:1.05em;">99%以上</strong>病菌</span>
+            </div>
+            <div class="concept-text">
+              真正做到<span class="concept-highlight">「去異味＝防疫」</span>的全新空氣防線
+            </div>
+          </div>
           <div class="hero-cta">
             <a class="btn-primary" href="#bundles">立即搶購</a>
             <a class="btn-ghost" href="#tech">了解技術優勢</a>
@@ -460,7 +542,7 @@
       </details>
       <details>
         <summary>適用空間與保固？</summary>
-        <p>居家、商空皆可。MIT 原廠保固，亦提供企業導入與年度保養服務。</p>
+        <p>居家、商空皆可，並能依據詳細空間提供專業的建議需求。保固期間內，非人為損壞可免費獲得維修服務。提醒需認明WETOP原廠保固!!</p>
       </details>
     </section>
 
